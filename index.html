@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<script>
+  (function() {
+    var GA_ID = 'G-4QPBDE73Z4';
+    var isLocalDev = ['localhost', '127.0.0.1', ''].includes(location.hostname);
+    if (isLocalDev) return;
+    var gaQ = new URLSearchParams(location.search); if (gaQ.get('obs') === '1' || gaQ.get('no_ga') === '1') return;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', GA_ID);
+    document.addEventListener('click', function(e) {
+      var a = e.target && e.target.closest ? e.target.closest('a[href*="booth.pm"]') : null;
+      if (!a) return;
+      gtag('event', 'booth_click', { link_url: a.href, link_id: a.id || '', link_text: (a.textContent || '').trim().slice(0, 40) });
+    });
+  })();
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="アクセサリー台紙を無料テンプレート感覚で作成してA4印刷。ピアス・イヤリング・ネックレス・ヘアゴム・ブローチ用に、穴あけ位置の目印つき(ピアス1〜2mm・イヤリング4mm)。小35&#215;50・ハーフ・正方形・名刺サイズ(縦・横)・縦長から選んで、ショップ名を入れるだけ。スマホからPDF保存してコンビニ印刷も。登録不要。">
+<link rel="canonical" href="https://uuhai0625.github.io/accessory-daishi/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:title" content="アクセサリー台紙 無料テンプレート作成|ピアス・イヤリング・ネックレス・ヘアゴム・ブローチ用をA4印刷">
+<meta property="og:description" content="アクセサリー台紙を無料テンプレート感覚で作成してA4印刷。ピアス・イヤリング・ネックレス・ヘアゴム・ブローチ用に、穴あけ位置の目印つき(ピアス1〜2mm・イヤリング4mm)。小35&#215;50・ハーフ・正方形・名刺サイズ(縦・横)・縦長から選んで、ショップ名を入れるだけ。スマホからPDF保存してコンビニ印刷も。登録不要。">
+<meta property="og:url" content="https://uuhai0625.github.io/accessory-daishi/">
+<title>アクセサリー台紙 無料テンプレート作成|ピアス・イヤリング・ネックレス・ヘアゴム・ブローチ用をA4印刷</title>
+<style>
+  :root {
+    --bg: #f8f4f5;
+    --panel: #ffffff;
+    --border: #e6dbdf;
+    --field-border: #7f6c74;
+    --text: #2c2226;
+    --muted: #5f5157;
+    --accent: #9a4a68;
+    --accent-dark: #763851;
+    --soft: #f6e9ee;
+    --warn-bg: #fff4e0;
+    --warn-text: #7a4b00;
+    --ng: #b3261e;
+    --locked: #b8a9af;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+  header { background: linear-gradient(135deg, var(--accent), var(--accent-dark)); color: #fff; padding: 24px 20px 18px; text-align: center; }
+  header h1 { margin: 0 0 6px; font-size: 1.35rem; }
+  header p { margin: 0; font-size: .9rem; }
+  main { max-width: 1040px; margin: 0 auto; padding: 22px 16px 50px; }
+  section.card { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 18px 20px; margin-bottom: 18px; }
+  section.card h2 { margin: 0 0 6px; font-size: 1.05rem; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  section.card h3 { margin: 14px 0 4px; font-size: .95rem; }
+  .desc { color: var(--muted); font-size: .84rem; margin: 0 0 12px; }
+  .fine { color: var(--muted); font-size: .8rem; margin: 8px 0 0; }
+  .badge { display: inline-block; font-size: .72rem; padding: 2px 8px; border-radius: 999px; background: #fff1cc; color: #7a5600; font-weight: bold; }
+  .hidden { display: none !important; }
+  label.field { display: block; margin-bottom: 10px; }
+  .lbl { font-size: .82rem; font-weight: bold; display: block; }
+  .hint { font-size: .78rem; color: var(--muted); font-weight: normal; display: block; margin-top: 2px; }
+  input[type=text], select, textarea { width: 100%; margin-top: 4px; padding: 8px 10px; min-height: 44px; border: 1px solid var(--field-border); border-radius: 8px; font-size: 1rem; font-family: inherit; background: #fff; color: var(--text); }
+  textarea { min-height: 110px; }
+  .row2, .row3 { display: flex; gap: 10px; }
+  .row2 > *, .row3 > * { flex: 1; min-width: 0; }
+  label.check { display: flex; align-items: center; gap: 8px; min-height: 44px; font-size: .86rem; cursor: pointer; }
+  label.check input { width: 20px; height: 20px; margin: 0; flex-shrink: 0; }
+  .checks { display: flex; gap: 4px 18px; flex-wrap: wrap; }
+  .seg { display: flex; gap: 8px; flex-wrap: wrap; }
+  .seg label { min-height: 44px; display: flex; align-items: center; gap: 6px; border: 1px solid var(--field-border); border-radius: 8px; padding: 6px 12px; font-size: .86rem; cursor: pointer; background: #fff; }
+  .seg label.on { border-color: var(--accent); background: var(--soft); font-weight: bold; }
+  .seg label:focus-within { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .seg small { font-weight: normal; color: var(--muted); }
+  fieldset.plain { border: none; padding: 0; margin: 0 0 12px; min-width: 0; }
+  fieldset.plain legend { font-size: .85rem; font-weight: bold; padding: 0; margin-bottom: 5px; }
+  .btn-row { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; align-items: center; }
+  .btn { min-height: 44px; padding: 9px 16px; border-radius: 8px; font-size: .88rem; cursor: pointer; border: 1px solid var(--field-border); background: #fff; color: var(--text); font-family: inherit; }
+  .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: bold; }
+  .btn.small { min-height: 40px; padding: 6px 12px; font-size: .82rem; }
+  .btn:disabled { opacity: .5; cursor: not-allowed; }
+  .btn:focus-visible { outline: 2px solid var(--accent-dark); outline-offset: 2px; }
+  .status { font-size: .82rem; color: var(--muted); margin-top: 6px; min-height: 1.2em; }
+  .status.err { color: var(--ng); font-weight: bold; }
+  .warn { background: var(--warn-bg); color: var(--warn-text); border-radius: 8px; padding: 8px 12px; font-size: .83rem; margin: 8px 0 0; }
+  .guide { font-size: .86rem; }
+  .guide ul, .guide ol { padding-left: 1.3em; margin: 6px 0; }
+  .guide li { margin: 4px 0; }
+  .zoom-wrap { display: flex; gap: 14px; align-items: flex-start; flex-wrap: wrap; margin-top: 10px; }
+  .zoom-box { position: relative; overflow: hidden; border: 1px solid var(--border); border-radius: 6px; background: #fff; flex-shrink: 0; }
+  .zoom-inner { position: absolute; left: 0; top: 0; transform-origin: top left; }
+  .zoom-cap { font-size: .8rem; color: var(--muted); max-width: 22em; }
+
+  .locked-panel { border: 1px dashed var(--locked); border-radius: 10px; padding: 16px; text-align: center; color: var(--muted); background: #fbf8f9; }
+  .locked-panel .lead { color: var(--text); font-weight: bold; }
+  .locked-panel .feat-list { text-align: left; max-width: 620px; margin: 10px auto; font-size: .85rem; padding-left: 1.2em; }
+  .buy-btn { display: inline-block; margin-top: 8px; background: var(--accent-dark); color: #fff; font-weight: bold; padding: 11px 22px; border-radius: 999px; text-decoration: none; font-size: .9rem; }
+
+  /* ===== 印刷シート ===== */
+  #sheetsWrap { overflow: hidden; }
+  .sheet-scale { transform-origin: top left; }
+  .sheet { width: 210mm; height: 297mm; background: #fff; position: relative; overflow: hidden; box-shadow: 0 1px 6px rgba(0,0,0,.18); margin-bottom: 8mm; }
+  .sheet-no { font-size: .8rem; color: var(--muted); margin: 0 0 4px; }
+  .cell { position: absolute; overflow: hidden; }
+  .cell.cut::after { content: ""; position: absolute; inset: 0; border-right: .25mm dashed var(--cut, #858585); border-bottom: .25mm dashed var(--cut, #858585); pointer-events: none; z-index: 3; }
+  .cell.cut.c0::after { border-left: .25mm dashed var(--cut, #858585); }
+  .cell.cut.r0::after { border-top: .25mm dashed var(--cut, #858585); }
+  .ac { position: absolute; inset: 0; background: var(--a-bg, #fff); color: var(--a-text, #222); font-family: var(--a-font); }
+  .ac .frame { position: absolute; inset: 2mm; border: var(--a-frame, none); border-radius: var(--a-radius, 0); pointer-events: none; }
+  .ac .band { position: absolute; left: 0; right: 0; height: 3mm; background: var(--a-accent); }
+  .ac .txt { position: absolute; left: 3mm; right: 3mm; text-align: center; line-height: 1.25; }
+  .ac .t-name { font-weight: bold; white-space: nowrap; overflow: hidden; }
+  .ac .t-name.sample { opacity: .3; font-weight: normal; letter-spacing: .05em; }
+  .ac .t-sub { color: var(--a-muted, #666); white-space: nowrap; overflow: hidden; margin-top: .4mm; }
+  .ac .t-logo { display: block; margin: 0 auto .8mm; object-fit: contain; }
+  .ac .back { position: absolute; left: 4mm; right: 4mm; font-size: 6.5pt; line-height: 1.45; white-space: pre-wrap; word-break: break-all; overflow: hidden; text-align: left; }
+  .ac .back b { display: block; font-size: 7.5pt; margin-bottom: 1mm; }
+  .mark { position: absolute; pointer-events: none; z-index: 2; }
+  .mark.hole { border: .25mm solid var(--a-mark, #777); border-radius: 50%; }
+  .mark.hole::after { content: ""; position: absolute; left: 50%; top: 50%; width: .5mm; height: .5mm; margin: -.25mm 0 0 -.25mm; background: var(--a-mark, #777); border-radius: 50%; }
+  .mark.hang { border: .25mm dashed var(--a-mark, #777); border-radius: 50%; }
+
+  footer { max-width: 1040px; margin: 0 auto; padding: 0 16px 40px; font-size: .8rem; color: var(--muted); }
+  footer a { color: var(--muted); }
+  @media (max-width: 600px) {
+    .row2, .row3 { flex-direction: column; gap: 0; }
+    section.card { padding: 16px 14px; }
+  }
+  @page { size: A4 portrait; margin: 0; }
+  @media print {
+    body { background: #fff; }
+    body > *:not(main), main > *:not(#preview-card) { display: none !important; }
+    main { max-width: none; padding: 0; margin: 0; }
+    #preview-card { border: none; padding: 0; margin: 0; }
+    #preview-card > *:not(#sheetsWrap) { display: none !important; }
+    #sheetsWrap { overflow: visible; height: auto !important; margin: 0 !important; }
+    .sheet-scale { transform: none !important; }
+    .sheet-no { display: none; }
+    .sheet { box-shadow: none; margin: 0; height: 296mm; page-break-after: always; break-after: page; }
+    .sheet:last-child { page-break-after: auto; break-after: auto; }
+    .ac .t-name.sample { visibility: hidden; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>アクセサリー台紙メーカー(無料テンプレート・A4印刷)</h1>
+  <p>ショップ名を入れるだけで、ピアス・イヤリング・ネックレス・ヘアゴム・ブローチの台紙をA4でまとめて印刷。穴あけ位置の目印つき・登録不要</p>
+</header>
+
+<main>
+
+  <section class="card">
+    <h2>① 台紙の種類と大きさ</h2>
+    <fieldset class="plain" aria-describedby="kindHint">
+      <legend>付けるアクセサリー(穴の位置と大きさが変わります)</legend>
+      <div class="seg" id="kindSeg"></div>
+      <span class="hint" id="kindHint"></span>
+    </fieldset>
+    <fieldset class="plain">
+      <legend>台紙の大きさ(A4に並ぶ枚数)</legend>
+      <div class="seg" id="sizeSeg"></div>
+    </fieldset>
+    
+    <div class="checks">
+      <label class="check"><input type="checkbox" id="opt-marks" checked> 穴あけの目印を印刷する</label>
+      <label class="check"><input type="checkbox" id="opt-hang"> 吊り下げ用の穴(上の真ん中)</label>
+      <label class="check"><input type="checkbox" id="opt-cut" checked> 切り取り線を印刷する</label>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>② 文字とデザイン</h2>
+    <div class="row2">
+      <label class="field"><span class="lbl">ショップ名・ブランド名</span><input type="text" id="in-name" maxlength="30" value="" placeholder="例: atelier mori"><span class="hint" id="nameHint"></span></label>
+      <label class="field"><span class="lbl">ひとこと・SNSアカウント(任意)</span><input type="text" id="in-sub" maxlength="40" value="" placeholder="例: handmade accessory / @atelier_mori"></label>
+    </div>
+    <fieldset class="plain">
+      <legend>デザイン</legend>
+      <div class="seg" id="designSeg"></div>
+    </fieldset>
+    <div class="row2">
+      <label class="field"><span class="lbl">書体</span>
+        <select id="in-font">
+          <option value="gothic">ゴシック</option>
+          <option value="mincho">明朝</option>
+          <option value="serif">英字セリフ(Georgia)</option>
+        </select>
+      </label>
+      <label class="field"><span class="lbl">文字の位置</span>
+        <select id="in-pos">
+          <option value="auto">おまかせ(アクセサリーと重ならない位置)</option>
+          <option value="top">上</option>
+          <option value="bottom">下</option>
+        </select>
+      </label>
+    </div>
+  </section>
+
+  <section class="card" id="pro-section">
+    <h2>ロゴ入りの台紙を作る <span class="badge">買い切り版 ¥100</span></h2>
+    <div class="locked-panel">
+      <p class="lead">ロゴ画像を入れて、ショップらしい台紙に。裏面にお手入れ方法やショップ情報も入れられます。</p>
+      <p>このページの機能は無料でそのまま使えます。買い切り版(ダウンロード購入)では、次の機能が増えます:</p>
+      <ul class="feat-list">
+        <li><strong>ロゴ画像</strong>を台紙に入れられます(透明PNGもOK)</li>
+        <li><strong>追加デザイン4種</strong>(くすみピンク・ネイビー・ドット・グラデーション)と<strong>色の変更</strong></li>
+        <li><strong>裏面</strong>: お手入れ方法・素材・ショップ情報などを、表と位置を合わせて作成(プリンターによっては数mmずれるので、裏面だけ別の紙に印刷して貼る方法も使えます)</li>
+        <li><strong>寸法を入力</strong>して好きな大きさに、穴の間隔と高さも調整</li>
+        <li><strong>設定の保存</strong>(10件まで): ピアス用・ネックレス用などを名前をつけて保存</li>
+        <li>パソコン向けのHTMLファイルです。ダブルクリックで開くだけ、ネットにつながっていなくても使えます</li>
+      </ul>
+      <a class="buy-btn" href="https://uuhai0625.booth.pm/items/8934848" id="buyLink" target="_blank" rel="noopener">買い切り版を見る(BOOTH・新しいタブ)</a>
+    </div>
+  </section>
+
+  
+
+  <section class="card" id="preview-card">
+    <h2>印刷プレビュー</h2>
+    <p class="status" id="previewInfo" aria-live="polite"></p>
+    <div id="warns" aria-live="polite"></div>
+    <div class="zoom-wrap">
+      <div class="zoom-box" id="zoomBox" role="img" aria-label="台紙1枚の拡大"><div class="zoom-inner" id="zoomInner"></div></div>
+      <p class="zoom-cap">台紙1枚を拡大したものです。穴の目印とショップ名が重なっていないか確かめてください。</p>
+    </div>
+    <div class="btn-row">
+      <button class="btn primary" type="button" id="printBtn">印刷する(PDFで保存もできます)</button>
+    </div>
+    <p class="fine">印刷の設定: 用紙「A4」、倍率は100%(Chromeなら「倍率: デフォルト」、Edgeなら「実際のサイズ」、Firefox・Safariは「拡大縮小 100%」)、余白「なし」、「背景のグラフィック」(Safariは「背景をプリント」)をオン。「ページに合わせる」やプリンターの「フチなし印刷」を選ぶと少し拡大されてサイズがずれます。スマホから直接印刷すると縮小されることがあるので、スマホではPDFで保存してコンビニのネットプリントを使うのがおすすめです(下の作り方を参照)。最初の1枚は普通紙で試し刷りして、定規でサイズを確かめてください。</p>
+    <div id="sheetsWrap" style="margin-top:12px;"><div class="sheet-scale" id="sheets"></div></div>
+    <p class="fine">値札も作るなら <a href="https://uuhai0625.github.io/nefuda-maker/" target="_blank" rel="noopener">値札メーカー</a> もどうぞ。</p>
+  </section>
+
+  <section class="card guide" id="guide">
+    <h2>アクセサリー台紙の作り方</h2>
+    <ol>
+      <li>①で付けるアクセサリーと台紙の大きさ、②でショップ名とデザインを選びます。</li>
+      <li>A4の厚めの紙(160〜210g/m²・厚さ0.25mmまでが目安。マット紙・ケント紙・名刺用紙など)に印刷します。プリンターの説明書で使える紙の厚さを確かめ、背面トレイや手差しから1枚ずつ入れてください。</li>
+      <li>切り取り線に沿って、カッターと定規で切ります。</li>
+      <li>目印の丸に穴をあけます(下の「穴あけ」を参照)。</li>
+    </ol>
+    <h3>ピアス・イヤリング台紙の穴あけ</h3>
+    <ul>
+      <li><strong>ピアス</strong>: 目打ちか2mmの穴あけパンチで、小さな穴(1〜2mm)をあけます。ポストを通して裏からキャッチで留めます。フックピアスは穴に通して裏側に引っかけます。</li>
+      <li><strong>イヤリング</strong>: 4mm前後の穴をあけ、ネジバネ・クリップの後ろ側を穴に通して台紙をはさみます。ゆるいときは裏にイヤリング用スポンジをはさみます。外しやすくしたいときは、穴から台紙の外側へ横に切り込みを入れます。</li>
+      <li>事務用の1穴パンチ(約6mm)は、ピアスには大きすぎてキャッチが抜けてしまいます。</li>
+    </ul>
+    <h3>ネックレス・ヘアゴム・ブローチ台紙</h3>
+    <ul>
+      <li><strong>ネックレス</strong>: 上の2つの穴にチェーンを通して裏で留めます(穴から上の端へ斜めに切り込みを入れると、差し込むだけで留まります)。トップの上のチェーンを下の穴から少し裏へ通すか、透明テープで留めます。</li>
+      <li><strong>ヘアゴム</strong>: 飾りを表に置き、ゴムを穴から裏へ通して、裏で台紙に引っかけるか透明テープで留めます。</li>
+      <li><strong>ブローチ</strong>: ピンを開いて、片方の穴から裏へ、もう片方の穴から表へ通し、留め具を閉じます(穴の間隔は手持ちのピンに合わせてください)。</li>
+    </ul>
+    <h3>スマホで作る・コンビニで印刷する</h3>
+    <ol>
+      <li>スマホでこのページを開き、ショップ名を入れて「印刷する」から「PDFで保存」します(iPhoneは印刷画面の共有ボタンから「ファイルに保存」)。</li>
+      <li>PDFをコンビニのネットプリント(セブン-イレブンの「netprint」、ローソン・ファミリーマートなどの「ネットワークプリント」)に登録し、A4の普通紙に印刷します。</li>
+      <li>厚紙にスプレーのりか両面テープで全面を貼ってから切ります(液体のりはシワの原因になります)。コンビニ印刷は少し縮小されることがあるので、定規で寸法を確かめてから切ってください。</li>
+    </ol>
+    <p class="fine">目印の位置は一般的な目安です。手持ちのアクセサリーを台紙に置いて確かめてから穴をあけてください。</p>
+  </section>
+
+</main>
+
+<footer>
+  <p id="privacyNote">入力内容はどこにも送信されません(このブラウザの中に保存されます)。</p>
+  <p>値段を決めるなら <a href="https://uuhai0625.github.io/handmade-genka/" target="_blank" rel="noopener">ハンドメイド原価計算ツール</a> もどうぞ。<a href="https://uuhai0625.booth.pm/" target="_blank" rel="noopener">他のツールも見る(BOOTHショップ)</a></p>
+  <p>不具合・ご要望は X <a href="https://x.com/uuhai0625" target="_blank" rel="noopener">@uuhai0625</a> まで。</p>
+</footer>
+
+<script>
+(function () {
+  "use strict";
+
+  var EDITION = "free"; // "full" で買い切り完全版
+
+  function track(name, params) {
+    if (!window.dataLayer) return;
+    (function () { window.dataLayer.push(arguments); })("event", name, params || {});
+  }
+  var $ = function (id) { return document.getElementById(id); };
+  function el(tag, attrs, text) {
+    var e = document.createElement(tag);
+    if (attrs) Object.keys(attrs).forEach(function (k) { if (k === "class") e.className = attrs[k]; else e.setAttribute(k, attrs[k]); });
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function has(o, k) { return Object.prototype.hasOwnProperty.call(o, k); }
+  function setSt(id, msg, err) { var e = $(id); if (!e) return; e.textContent = msg; e.classList.toggle("err", !!err); }
+  var MM = 25.4 / 96; // 1px = MM mm(画面上の CSS px)
+
+  // ===== 付けるアクセサリー: 穴の数・位置・大きさ(y: 上からの割合、gap: 幅に対する間隔、r: 穴の半径mm) =====
+  var KINDS = {
+    pierce: { label: "ピアス", n: 2, y: 0.40, gap: 0.40, r: 1, hint: "穴は1〜2mm(目打ちか2mmの穴あけパンチ)。ポストを通して裏からキャッチで留めます。" },
+    earring: { label: "イヤリング", n: 2, y: 0.45, gap: 0.40, r: 2, hint: "穴は4mm前後。金具の後ろ側を穴に通して台紙をはさみます。" },
+    necklace: { label: "ネックレス", n: 2, topMm: 6, gap: 0.45, r: 1, pend: true, hint: "上の2つの穴にチェーンを通し、トップの上のチェーンを下の穴で留めます。" },
+    hairtie: { label: "ヘアゴム", n: 2, y: 0.40, gap: 0.22, r: 1.5, hint: "2つの穴にゴムを通して、裏で引っかけるかテープで留めます。" },
+    brooch: { label: "ブローチ", n: 2, y: 0.45, gapMm: 12, r: 1, hint: "横に並んだ2つの穴にピンを通します(間隔は手持ちのピンに合わせて)。" },
+    none: { label: "目印なし", n: 0, y: 0.4, gap: 0, r: 0, hint: "穴の目印を入れません。" }
+  };
+  // ===== 台紙の大きさ(mm)。A4の中央に、まわり5mm以上あけて並べる =====
+  var SIZES = {
+    small: { label: "小 35×50", w: 35, h: 50 },
+    half: { label: "ハーフ 55×45", w: 55, h: 45 },
+    sq50: { label: "正方形 50×50", w: 50, h: 50 },
+    cardV: { label: "名刺 縦 55×91", w: 55, h: 91 },
+    cardH: { label: "名刺 横 91×55", w: 91, h: 55 },
+    long: { label: "縦長 50×100", w: 50, h: 100 }
+  };
+  var DESIGNS = {
+    simple: { label: "シンプル", bg: "#ffffff", text: "#222222", muted: "#5c5c5c", frame: "none", accent: "#222222", mark: "#6e6e6e", cut: "#858585" },
+    kraft: { label: "クラフト紙風", bg: "#ecdfc8", text: "#4a3524", muted: "#6a5140", frame: ".3mm dashed #7a5c40", radius: "1.5mm", accent: "#7a5c40", mark: "#6f5643", cut: "#6f5643" },
+    line: { label: "細い枠", bg: "#ffffff", text: "#2a2a2a", muted: "#5c5c5c", frame: ".25mm solid #9a4a68", radius: "0", accent: "#9a4a68", mark: "#6e6e6e", cut: "#858585", useAccent: "frame" }
+  };
+  var FONTS = {
+    gothic: '"Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif',
+    mincho: '"Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", serif',
+    serif: 'Georgia, "Times New Roman", "Hiragino Mincho ProN", "Yu Mincho", serif'
+  };
+  var KEY = "daishi_cur_v1", MARGIN = 5, LOGO_MAX = 300000;
+
+  // 買い切り版で差し替えるフック
+  var decorate = function () {};
+  var customSize = null;
+  var backPage = null;
+  var syncExtra = function () {};
+  var extraWarns = function () {};
+
+  function blank() { return { kind: "pierce", size: "half", design: "simple", name: "", sub: "", font: "gothic", pos: "auto", marks: true, hang: false, cut: true, accent: "", logo: "", back: false, backText: null, cw: "60", ch: "80", cgap: "", cy: "" }; }
+  var state = blank();
+  function sanitize(o) {
+    var s = blank();
+    if (!o || typeof o !== "object") return s;
+    if (has(KINDS, o.kind)) s.kind = o.kind;
+    if (has(SIZES, o.size) || o.size === "custom") s.size = o.size;
+    if (has(DESIGNS, o.design)) s.design = o.design;
+    if (typeof o.name === "string") s.name = o.name.slice(0, 30);
+    if (typeof o.sub === "string") s.sub = o.sub.slice(0, 40);
+    if (has(FONTS, o.font)) s.font = o.font;
+    if (["auto", "top", "bottom"].indexOf(o.pos) >= 0) s.pos = o.pos;
+    ["marks", "hang", "cut", "back"].forEach(function (k) { if (typeof o[k] === "boolean") s[k] = o[k]; });
+    if (typeof o.accent === "string" && /^#[0-9a-fA-F]{6}$/.test(o.accent)) s.accent = o.accent;
+    if (typeof o.logo === "string" && /^data:image\/(png|jpeg|webp);base64,[A-Za-z0-9+\/=]+$/.test(o.logo) && o.logo.length <= LOGO_MAX) s.logo = o.logo;
+    if (typeof o.backText === "string") s.backText = o.backText.slice(0, 400);
+    ["cw", "ch", "cgap", "cy"].forEach(function (k) { if (typeof o[k] === "string") s[k] = o[k].slice(0, 8); });
+    if (EDITION !== "full") { if (!has(SIZES, s.size)) s.size = "half"; if (!has(DESIGNS, s.design)) s.design = "simple"; s.accent = ""; s.logo = ""; s.back = false; }
+    return s;
+  }
+  function sizeSpec() {
+    if (state.size === "custom" && customSize) return customSize();
+    return SIZES[state.size] || SIZES.half;
+  }
+  function grid(sp) {
+    var cols = Math.max(1, Math.floor((210 - 2 * MARGIN) / sp.w)), rows = Math.max(1, Math.floor((297 - 2 * MARGIN) / sp.h));
+    return { cols: cols, rows: rows, ml: (210 - cols * sp.w) / 2, mt: (297 - rows * sp.h) / 2 };
+  }
+
+  // ===== 穴の位置(台紙の中の mm)。台紙からはみ出さないように収める =====
+  function markSpec(sp) {
+    var k = KINDS[state.kind] || KINDS.pierce, out = [], r = k.r || 1;
+    if (state.marks && k.n) {
+      var y = k.topMm != null ? Math.max(k.topMm, r + 3) : (sp.markY != null ? sp.markY : k.y) * sp.h;
+      if (k.topMm != null && sp.markY != null) y = sp.markY * sp.h;
+      y = Math.max(r + 2, Math.min(sp.h - r - 2, y));
+      var gap = sp.markGap != null ? sp.markGap : k.gapMm != null ? k.gapMm : Math.max(8, Math.min(sp.w * k.gap, 40));
+      gap = Math.max(2 * r + 2, Math.min(gap, sp.w - 2 * r - 4));
+      out.push({ t: "hole", x: sp.w / 2 - gap / 2, y: y, r: r });
+      out.push({ t: "hole", x: sp.w / 2 + gap / 2, y: y, r: r });
+      if (k.pend) { var py = y + sp.h * 0.3; if (py < sp.h - 4) out.push({ t: "hole", x: sp.w / 2, y: py, r: 1 }); }
+    }
+    if (state.hang) { var hr = 2.5; out.push({ t: "hang", x: sp.w / 2, y: Math.max(hr + 3, Math.min(6, sp.h * 0.12)), r: hr }); }
+    return out;
+  }
+  // 文字の位置: アクセサリーと重ならないほう
+  function textAtTop(sp, marks) {
+    if (state.pos === "top") return true;
+    if (state.pos === "bottom") return false;
+    var ys = marks.filter(function (m) { return m.t !== "hang"; }).map(function (m) { return m.y / sp.h; });
+    if (!ys.length) return false;
+    return Math.min.apply(null, ys) > 0.55;
+  }
+
+  function hexLum(h) { var m = /^#([0-9a-f]{6})$/i.exec(h || ""); if (!m) return null; var n = parseInt(m[1], 16); return [n >> 16 & 255, n >> 8 & 255, n & 255].map(function (c) { c /= 255; return c <= .03928 ? c / 12.92 : Math.pow((c + .055) / 1.055, 2.4); }).reduce(function (a, c, i) { return a + c * [.2126, .7152, .0722][i]; }, 0); }
+  function contrast(a, b) { var x = hexLum(a), y = hexLum(b); if (x == null || y == null) return 99; return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); }
+  function textColor(d) { return state.accent && d.useAccent !== "frame" ? state.accent : d.text; }
+  function designVars(d) {
+    var accent = state.accent || d.accent;
+    return { "--a-bg": d.bg, "--a-text": textColor(d), "--a-muted": d.muted, "--a-frame": d.useAccent === "frame" ? d.frame.replace(/#[0-9a-fA-F]{6}$/, accent) : d.frame, "--a-radius": d.radius || "0", "--a-accent": accent, "--a-mark": d.mark };
+  }
+  function markEl(m, x) {
+    var e = el("div", { class: "mark " + (m.t === "hang" ? "hang" : "hole") });
+    e.style.left = (x - m.r) + "mm"; e.style.top = (m.y - m.r) + "mm"; e.style.width = 2 * m.r + "mm"; e.style.height = 2 * m.r + "mm";
+    return e;
+  }
+  function buildCard(sp, d) {
+    var ac = el("div", { class: "ac" });
+    var v = designVars(d); Object.keys(v).forEach(function (k) { ac.style.setProperty(k, v[k]); });
+    ac.style.setProperty("--a-font", FONTS[state.font] || FONTS.gothic);
+    if (d.frame && d.frame !== "none") ac.appendChild(el("div", { class: "frame" }));
+    var marks = markSpec(sp), top = textAtTop(sp, marks);
+    if (d.band) { var b = el("div", { class: "band" }); b.style[top ? "bottom" : "top"] = "0"; ac.appendChild(b); }
+    var minSide = Math.min(sp.w, sp.h), nameSz = Math.max(7, Math.min(14, minSide * 0.2)), subSz = Math.max(5.5, Math.min(7.5, nameSz * 0.55));
+    var box = el("div", { class: "txt" });
+    var hang = marks.filter(function (m) { return m.t === "hang"; })[0];
+    var edge = (d.band ? 4.5 : 3.5);
+    if (top) box.style.top = (hang ? Math.max(edge, hang.y + hang.r + 1) : edge) + "mm"; else box.style.bottom = edge + "mm";
+    decorate(box, sp, nameSz);
+    if (state.name) box.appendChild(el("div", { class: "t-name", style: "font-size:" + nameSz + "pt" }, state.name));
+    else if (!state.logo) box.appendChild(el("div", { class: "t-name sample", style: "font-size:" + nameSz + "pt" }, "SHOP NAME"));
+    if (state.sub) box.appendChild(el("div", { class: "t-sub", style: "font-size:" + subSz + "pt" }, state.sub));
+    ac.appendChild(box);
+    marks.forEach(function (m) { ac.appendChild(markEl(m, m.x)); });
+    return { el: ac, box: box, top: top, marks: marks, sp: sp };
+  }
+  // 文字がはみ出す・穴に重なるときは小さく(ロゴ→文字の順)。{cut, overlap}
+  function fitCard(c) {
+    var res = { cut: false, overlap: false };
+    var nm = c.box.querySelector(".t-name"), sb = c.box.querySelector(".t-sub"), lg = c.box.querySelector(".t-logo");
+    [nm, sb].forEach(function (e) {
+      if (!e) return;
+      var sz = parseFloat(e.style.fontSize), min = e === nm ? 6 : 5, g = 0;
+      if (e.scrollWidth > e.clientWidth + .5) { sz = Math.max(min, Math.floor(sz * e.clientWidth / e.scrollWidth * 4) / 4); e.style.fontSize = sz + "pt"; }
+      while (g++ < 8 && e.scrollWidth > e.clientWidth + .5 && sz > min) { sz -= .25; e.style.fontSize = sz + "pt"; }
+      if (e.scrollWidth > e.clientWidth + .5 && !e.classList.contains("sample")) res.cut = true;
+    });
+    // 穴の目印と縦に重ならないか
+    var holes = c.marks.filter(function (m) { return m.t === "hole"; });
+    if (!holes.length) return res;
+    function clash() {
+      var h = c.box.offsetHeight * MM, sp = c.sp;
+      if (c.top) { var t = parseFloat(c.box.style.top), bottom = t + h; return holes.some(function (m) { return m.y - m.r - 0.8 < bottom; }); }
+      var b = parseFloat(c.box.style.bottom), topY = sp.h - b - h; return holes.some(function (m) { return m.y + m.r + 0.8 > topY; });
+    }
+    var g2 = 0;
+    while (g2++ < 24 && clash()) {
+      if (lg && lg.offsetHeight * MM > 4) { lg.style.maxHeight = Math.max(4, lg.offsetHeight * MM * 0.85) + "mm"; continue; }
+      var changed = false;
+      [nm, sb].forEach(function (e) { if (!e) return; var sz = parseFloat(e.style.fontSize), min = e === nm ? 6 : 5; if (sz > min) { e.style.fontSize = Math.max(min, sz * 0.92) + "pt"; changed = true; } });
+      if (!changed) break;
+    }
+    res.overlap = clash();
+    return res;
+  }
+
+  // ===== 描画 =====
+  function render() {
+    readForm();
+    var sp = sizeSpec(), d = DESIGNS[state.design] || DESIGNS.simple, gd = grid(sp), per = gd.cols * gd.rows;
+    var box = $("sheets"); box.innerHTML = "";
+    var cards = [], msgs = [];
+    var sheets = [{ back: false }];
+    if (backPage && state.back) sheets.push({ back: true });
+    sheets.forEach(function (pg, pi) {
+      if (sheets.length > 1) box.appendChild(el("p", { class: "sheet-no" }, pi === 0 ? "1枚目(表)" : "2枚目(裏)"));
+      var sh = el("div", { class: "sheet", role: "img", "aria-label": "A4用紙の印刷イメージ(" + (pg.back ? "裏面" : "表面") + "・" + sp.label + "mmの台紙" + per + "枚・" + (state.name || "ショップ名なし") + "・" + d.label + ")" });
+      sh.style.setProperty("--cut", d.cut || "#858585");
+      for (var k = 0; k < per; k++) {
+        var c = k % gd.cols, r = Math.floor(k / gd.cols);
+        var col = pg.back ? gd.cols - 1 - c : c;   // 裏面は左右を入れ替えて、表と同じ位置に重なるようにする
+        var showCut = state.cut && !pg.back;       // 裏面は少しずれやすいので切り取り線を入れない
+        var cell = el("div", { class: "cell" + (showCut ? " cut" + (col === 0 ? " c0" : "") + (r === 0 ? " r0" : "") : "") });
+        cell.style.left = (gd.ml + col * sp.w) + "mm"; cell.style.top = (gd.mt + r * sp.h) + "mm"; cell.style.width = sp.w + "mm"; cell.style.height = sp.h + "mm";
+        if (pg.back) cell.appendChild(backPage(sp, d));
+        else { var cd = buildCard(sp, d); cell.appendChild(cd.el); cards.push(cd); }
+        sh.appendChild(cell);
+      }
+      box.appendChild(sh);
+    });
+    var fit = cards.length ? fitCard(cards[0]) : { cut: false, overlap: false };
+    cards.slice(1).forEach(fitCard);
+    scalePreview();
+    renderZoom(sp);
+    var k0 = KINDS[state.kind];
+    $("previewInfo").textContent = sp.label + "mm・" + k0.label + "用の台紙をA4に" + per + "枚(" + gd.cols + "列×" + gd.rows + "段)" + (sheets.length > 1 ? "・裏面つき" : "");
+    $("kindHint").textContent = k0.hint;
+    var noName = !state.name && !state.logo;
+    $("nameHint").textContent = noName ? "空欄のままだと、ショップ名なしで印刷されます(プレビューの薄い「SHOP NAME」は印刷されません)" : "";
+    if (noName) msgs.push("②にショップ名を入れると、台紙に入ります(プレビューの薄い「SHOP NAME」は見本で、印刷されません)。");
+    if (fit.cut) msgs.push("ショップ名か小さい文字が長すぎて、台紙の幅で切れています。短くするか、大きい台紙を選んでください。");
+    if (fit.overlap) msgs.push("文字が穴の目印に重なっています。文字の位置を変えるか、大きい台紙を選んでください。");
+    if (state.accent && contrast(textColor(d), /^#/.test(d.bg) ? d.bg : "#ffffff") < 4.5 && d.useAccent !== "frame") msgs.push("選んだ色は背景との差が小さく、文字が読みにくくなります。濃い色を選んでください。");
+    extraWarns(msgs, sp, d);
+    setWarns(msgs);
+    save();
+  }
+  function renderZoom(sp) {
+    var src = document.querySelector(".sheet .cell"), zi = $("zoomInner"), zb = $("zoomBox");
+    zi.innerHTML = "";
+    if (!src) return;
+    var cl = src.cloneNode(true); cl.style.left = "0"; cl.style.top = "0"; cl.classList.remove("cut");
+    var holder = el("div", { style: "position:relative;width:" + sp.w + "mm;height:" + sp.h + "mm;" }); holder.appendChild(cl);
+    zi.appendChild(holder);
+    var pxW = sp.w / MM, pxH = sp.h / MM, maxW = Math.min(300, ($("preview-card").clientWidth || 320) - 40), s = Math.min(maxW / pxW, 260 / pxH, 3);
+    zi.style.transform = "scale(" + s + ")"; zb.style.width = Math.round(pxW * s) + "px"; zb.style.height = Math.round(pxH * s) + "px";
+  }
+  var lastWarns = null;
+  function setWarns(msgs) {
+    var key = msgs.join("\n"); if (key === lastWarns) return; lastWarns = key;
+    var w = $("warns"); w.innerHTML = "";
+    msgs.forEach(function (m) { w.appendChild(el("p", { class: "warn" }, m)); });
+  }
+  function scalePreview() {
+    var wrap = $("sheetsWrap"), inner = $("sheets");
+    var mmPx = 96 / 25.4, sheetW = 210 * mmPx;
+    var avail = wrap.clientWidth || sheetW;
+    var s = Math.min(1, avail / sheetW);
+    inner.style.transform = "scale(" + s + ")";
+    inner.style.width = sheetW + "px";
+    wrap.style.height = (inner.scrollHeight * s) + "px";
+  }
+  var rsTimer = null;
+  window.addEventListener("resize", function () { clearTimeout(rsTimer); rsTimer = setTimeout(function () { scalePreview(); renderZoom(sizeSpec()); }, 150); });
+  var rTimer = null;
+  function soon() { clearTimeout(rTimer); rTimer = setTimeout(render, 120); }
+
+  // ===== 入力欄 =====
+  function sizeLabel(k) { var sp = SIZES[k], g = grid(sp); return sp.label + "mm(" + g.cols * g.rows + "枚)"; }
+  function segOf(boxId, name, list, cur) {
+    var box = $(boxId); box.innerHTML = "";
+    list.forEach(function (x) {
+      var l = el("label", x[0] === cur ? { class: "on" } : null), r = el("input", { type: "radio", name: name, value: x[0] });
+      if (x[0] === cur) r.checked = true;
+      r.addEventListener("change", function () { state[name] = x[0]; box.querySelectorAll("label").forEach(function (q) { q.classList.toggle("on", q.contains(r)); }); syncExtra(); soon(); });
+      l.appendChild(r); l.appendChild(document.createTextNode(" " + x[1])); box.appendChild(l);
+    });
+  }
+  var sizeExtra = [];
+  function buildSegs() {
+    segOf("kindSeg", "kind", Object.keys(KINDS).map(function (k) { return [k, KINDS[k].label]; }), state.kind);
+    segOf("sizeSeg", "size", Object.keys(SIZES).map(function (k) { return [k, sizeLabel(k)]; }).concat(sizeExtra), state.size);
+    segOf("designSeg", "design", Object.keys(DESIGNS).map(function (k) { return [k, DESIGNS[k].label]; }), state.design);
+  }
+  function readForm() {
+    state.name = $("in-name").value.slice(0, 30); state.sub = $("in-sub").value.slice(0, 40);
+    state.font = has(FONTS, $("in-font").value) ? $("in-font").value : "gothic";
+    state.pos = $("in-pos").value;
+    state.marks = $("opt-marks").checked; state.hang = $("opt-hang").checked; state.cut = $("opt-cut").checked;
+    readExtra();
+  }
+  var readExtra = function () {};
+  function fillForm() {
+    $("in-name").value = state.name; $("in-sub").value = state.sub; $("in-font").value = state.font; $("in-pos").value = state.pos;
+    $("opt-marks").checked = state.marks; $("opt-hang").checked = state.hang; $("opt-cut").checked = state.cut;
+    fillExtra();
+  }
+  var fillExtra = function () {};
+  ["in-name", "in-sub"].forEach(function (id) { $(id).addEventListener("input", soon); });
+  ["in-font", "in-pos", "opt-marks", "opt-hang", "opt-cut"].forEach(function (id) { $(id).addEventListener("change", soon); });
+  $("printBtn").addEventListener("click", function () {
+    render();
+    if (!state.name && !state.logo && !confirm("ショップ名が入っていません。このまま印刷しますか?")) { $("in-name").focus(); return; }
+    track("print_click", { kind: state.kind, size: state.size, design: state.design });
+    // ロゴ画像の読み込みを待ってから印刷する
+    var imgs = [].slice.call(document.querySelectorAll("#sheets img"));
+    Promise.all(imgs.map(function (i) { return i.decode ? i.decode().catch(function () {}) : null; })).then(function () { window.print(); });
+  });
+
+  var saveWarned = false;
+  function save() { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) { if (!saveWarned) { saveWarned = true; setWarns(["このブラウザに設定を保存できませんでした(容量がいっぱいの可能性があります)。"]); } } }
+
+  
+
+  if (EDITION !== "full") {
+    $("privacyNote").innerHTML = '入力内容はどこにも送信されません(このブラウザの中に保存されます)。このページでは利用状況の把握のためにアクセス解析(Google Analytics)を使っています(入力内容は送られません)。<a href="https://policies.google.com/technologies/partner-sites?hl=ja" target="_blank" rel="noopener">Googleによるデータの使用について</a>';
+  }
+
+  try { state = sanitize(JSON.parse(localStorage.getItem(KEY) || "null")); } catch (e) { state = blank(); }
+  buildSegs(); fillForm(); syncExtra(); render();
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(render);
+})();
+</script>
+</body>
+</html>
